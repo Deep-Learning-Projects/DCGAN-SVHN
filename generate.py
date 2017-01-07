@@ -5,7 +5,7 @@ from model import generator_model
 
 def generate_and_save(filename):
 	generator = generator_model()
-	noise = np.random.uniform(-1,1, (batch_size, 100))
+	noise = np.random.uniform(-1,1, (225, 100))
 	generator = generator_model()
 	generator.load_weights('generator_5100')
 	generated_images = generator.predict(noise, verbose=1)
