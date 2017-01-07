@@ -10,10 +10,11 @@ def _load_images():
 	images = images / 127.5 - 1.0
 	return images
 
-num_images = 732255
+# num_images = 73200
+num_images = 200
 images = _load_images()[:num_images]
-batch_size = 49
-num_batches = 73255 / batch_size
+batch_size = 100
+num_batches = num_images / batch_size
 
 def get_batch(i):
 	start_index = i * batch_size
